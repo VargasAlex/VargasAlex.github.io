@@ -1,0 +1,291 @@
+@import "compass/css3";
+@import "compass/css3/transform";
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+@import url(https://fonts.googleapis.com/css?family=Acme);
+
+html {
+  height: 100vh;
+  width: 100vw;
+  background: url('https://media.giphy.com/media/lDKVeTHWDPSuc/giphy.gif');
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background: #404040;
+  box-shadow: 5px 5px 3px grey;
+  margin-top: 10px;
+}
+
+.logo {
+  margin-top: 40px;
+  border-radius: 100%;
+  background: whitesmoke;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+.first {
+  margin-bottom: 0;
+  font-size: 2em;
+  font-family: 'Bangers', cursive;
+}
+
+.second {
+  margin-top: .6em;
+  font-size: 1.5em;
+  font-family: 'Bangers', cursive;
+  border-radius: 100%;
+  background: #282828;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  box-shadow: 5px 5px 3px grey;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3em;
+  white-space: nowrap;
+  z-index: 1000;
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  @include skew(0, -6.7deg, false);
+  @include transition-property(font-size);
+  @include transition-duration(0.5s);
+
+}
+
+/* .bio {
+  width: 100%;
+  height: 100%;
+  margin: 10px 0;
+  box-shadow: 5px 5px 3px grey;
+  background: #F5F5F5;
+} */
+
+.my-bio {
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+}
+
+main {
+  background: #404040;
+  padding: 5em 0;
+  box-shadow: 5px 5px 3px grey;
+  margin-bottom: -15px;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3em;
+  white-space: nowrap;
+  z-index: 1000;
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  @include skew(0, -6.7deg, false);
+  @include transition-property(font-size);
+  @include transition-duration(0.5s);
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  width: 600px;
+  height: 500px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  margin-bottom: 20px;
+}
+
+.project-link:hover {
+   box-shadow: 0 14px 28px whitesmoke, 0 10px 10px whitesmoke;
+}
+
+
+.quote {
+  display: flex;
+  justify-content: center;
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+}
+
+.qa1 {
+  display: flex;
+  justify-content: center;
+  margin-top: -1em;
+  color: #5F9F9F;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+}
+
+.qa2 {
+  display: flex;
+  justify-content: center;
+  margin-top: -2em;
+  color: #CD5C5C;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+}
+
+.qa3 {
+  display: flex;
+  justify-content: center;
+  margin-top: -2em;
+  color: #63AB62;
+  font-family: 'Bangers', cursive;
+  font-size: 20px;
+}
+
+footer {
+  background: #404040;
+  height: 100%;
+  width: 100%;
+  box-shadow: 5px 5px 3px grey;
+  text-align: center;
+}
+
+.contact {
+  margin-left: 10px;
+  font-family: 'Acme', sans-serif;
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.7);
+}
+
+.con-title {
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3em;
+  white-space: nowrap;
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  @include skew(0, -6.7deg, false);
+  @include transition-property(font-size);
+  @include transition-duration(0.5s);
+}
+
+img {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.projects {
+  display: block;
+  text-align: center;
+}
+
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    .portfolio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-link {
+      width: 300px;
+      height: 200px;
+    }
+
+    img {
+      width: 300px;
+      height: 200px;
+    }
+
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .project-link {
+      width: 355px;
+      height: 300px;
+    }
+
+    img {
+      width: 355px;
+      height: 300px;
+    }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .project-link {
+      width: 395px;
+      height: 300px;
+    }
+
+    img {
+      width: 395px;
+      height: 300px;
+    }
+}
+
+/* Galaxy S5 portrait */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .project-link {
+      width: 340px;
+    }
+
+    img {
+      width: 340px;
+    }
+}
+
+
